@@ -268,7 +268,7 @@
       </plugin>
       <plugin>
         <groupId>org.pitest</groupId>
-        <artifactId>pitest−maven</artifactId>
+        <artifactId>pitest-maven</artifactId>
         <version>1.6.6</version>
         <configuration>
           <mutator>ALL</mutator>
@@ -276,7 +276,12 @@
             <param>org.apache.commons.math4.stat.regression.SimpleRegression</param>
           </targetClasses>
           <targetTests>
-            <param>org.apache.commons.math4.stat.regression.SimpleRegressionTest</param>
+	    <param>org.apache.commons.math4.stat.regression.SimpleRegressionCACCTest</param>
+	    <param>org.apache.commons.math4.stat.regression.SimpleRegressionCCTest</param>
+	    <param>org.apache.commons.math4.stat.regression.SimpleRegressionCoCTest</param>
+            <param>org.apache.commons.math4.stat.regression.SimpleRegressionDuPathTest</param>
+	    <param>org.apache.commons.math4.stat.regression.SimpleRegressionPCTest</param>
+	    <param>org.apache.commons.math4.stat.regression.MainRegressMutationTest</param>
           </targetTests>
        </configuration>
       </plugin>
